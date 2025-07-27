@@ -16,10 +16,10 @@ target "devcontainer" {
     "linux/arm64",
   ]
   cache-from = [
-    "type=registry,ref=ghcr.io/xe/project-template/devcontainer/cache"
+    "type=registry,ref=ghcr.io/techarohq/alexandria/devcontainer/cache"
   ]
   cache-to = [
-    "type=registry,ref=ghcr.io/xe/project-template/devcontainer/cache"
+    "type=registry,ref=ghcr.io/techarohq/alexandria/devcontainer/cache"
   ]
   pull = true
   tags = [
@@ -38,6 +38,7 @@ target "alexandria" {
     "linux/amd64",
     "linux/arm64",
   ]
+  
   pull = true
   tags = [
     "ghcr.io/techarohq/alexandria:latest",
