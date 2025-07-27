@@ -23,7 +23,7 @@ target "devcontainer" {
   ]
   pull = true
   tags = [
-    "ghcr.io/xe/project-template/devcontainer:latest"
+    "ghcr.io/techarohq/alexandria/devcontainer:latest"
   ]
 }
 
