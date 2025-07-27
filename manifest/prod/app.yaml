@@ -1,0 +1,31 @@
+apiVersion: x.within.website/v1
+kind: App
+metadata:
+  name: alexandria
+  namespace: techaro
+
+spec:
+  image: git.xeserv.us/techaro-int/thoth/cmd/alexandria:$GIT_TAG
+  imagePullSecrets:
+    - git-xeserv-us
+  env:
+    - name: BUCKET
+      value: techaro-alexandria-prod
+  replicas: 2
+  port: 3000
+
+  healthcheck:
+    enabled: false
+    path: /healthz
+    port: 3000
+
+  ingress:
+    enabled: true
+    host: alexandria.techaro.lol
+    clusterIssuer: letsencrypt-prod
+    className: nginx
+
+  secrets:
+    - name: env
+      itemPath: vaults/lc5zo4zjz3if3mkeuhufjmgmui/items/mh2442nxyyx43rruzuquk2ou3y
+      environment: true

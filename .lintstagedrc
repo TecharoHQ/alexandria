@@ -1,0 +1,5 @@
+{
+  "**/*.{js,ts,html,json,css,scss,md,mdx,jsx,tsx}": ["prettier -w"],
+  "**/*.templ": ["go tool templ fmt"],
+  "**/*.go": ["go tool goimports -w"]
+}
