@@ -36,7 +36,7 @@ jobs:
         with:
           source: .
           push: true
-          targets: devcontainer,web
+          targets: devcontainer,alexandria
 
       - name: Build Docker image
         if: github.event_name == 'pull_request'
@@ -44,3 +44,4 @@ jobs:
         with:
           source: .
           push: false
+          targets: devcontainer,alexandria
