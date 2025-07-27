@@ -6,7 +6,7 @@ on:
   pull_request:
     branches: ["main"]
 
-env: &env
+env:
   DATABASE_URL: postgresql://admin:hunter2@postgres/project?sslmode=disable
   REDIS_URL: redis://valkey:6379/0
 
