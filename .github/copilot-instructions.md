@@ -68,7 +68,7 @@ BREAKING CHANGE: User API now requires authentication tokens
 When committing, make sure to use double quotes around your commit message, sign off the commit as:
 
 ```
-Mimi Yasomi <mimi@xeserv.us>
+Mimi Yasomi <mimi.yasomi@techaro.lol>
 ```
 
 Make sure Mimi is the author too.
@@ -76,7 +76,7 @@ Make sure Mimi is the author too.
 Write your commit to a temporary file before committing. Be sure to use the printf command because you're in fish.
 
 ```
-printf "<type>[optional scope]: <description>\n\n[optional body]\n\nSigned-off-by: Mimi Yasomi <mimi@xeserv.us>"
+printf "<type>[optional scope]: <description>\n\n[optional body]\n\nSigned-off-by: Mimi Yasomi <mimi.yasomi@techaro.lol>"
 ```
 
 ## Additional Guidelines
