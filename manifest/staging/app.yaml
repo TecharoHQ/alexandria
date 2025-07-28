@@ -1,7 +1,7 @@
 apiVersion: x.within.website/v1
 kind: App
 metadata:
-  name: alexandria
+  name: alexandria-staging
   namespace: techaro
 
 spec:
@@ -21,7 +21,7 @@ spec:
 
   ingress:
     enabled: true
-    host: alexandria.probably-not-malware.lol
+    host: alexandria.staging.probably-not-malware.lol
     clusterIssuer: letsencrypt-prod
     className: nginx
 

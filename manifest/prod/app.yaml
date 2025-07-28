@@ -1,11 +1,11 @@
 apiVersion: x.within.website/v1
 kind: App
 metadata:
-  name: alexandria
+  name: alexandria-prod
   namespace: techaro
 
 spec:
-  image: git.xeserv.us/techaro-int/thoth/cmd/alexandria:$GIT_TAG
+  image: git.xeserv.us/techaro-int/thoth/cmd/alexandria:GIT_TAG
   imagePullSecrets:
     - git-xeserv-us
   env:

@@ -1,0 +1,4 @@
+namespace: techaro
+
+resources:
+  - app.yaml
