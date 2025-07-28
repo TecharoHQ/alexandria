@@ -13,7 +13,7 @@ permissions:
 
 jobs:
   build:
-    if: github.repository == 'TecharoHQ/anubis'
+    if: github.repository == 'TecharoHQ/alexandria'
     runs-on: ubuntu-24.04
 
     steps:
