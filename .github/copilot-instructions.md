@@ -1,12 +1,16 @@
 # Copilot Instructions
 
-When undertaking a task, take a moment to pause and ask the user what the intent of the task is. Use this to write the best code to fix the problem or implement the feature.
+When undertaking a task, take a moment to pause and ask the user what the intent
+of the task is. Use this to write the best code to fix the problem or implement
+the feature.
 
 ## Code formatting
 
-We always write JavaScript with double quotes and two spaces for indentation, so when your responses include JavaScript code, please follow those conventions.
+We always write JavaScript with double quotes and two spaces for indentation, so
+when your responses include JavaScript code, please follow those conventions.
 
-Go code is written in the style of the standard library. When possible, tests are table-driven tests.
+Go code is written in the style of the standard library. When possible, tests
+are table-driven tests.
 
 All code is formatted with prettier on save, but to run formatting yourself:
 
@@ -16,7 +20,8 @@ npm run format
 
 ## Commit Message Format
 
-Always use conventional commit format for all commit messages. The format should be:
+Always use conventional commit format for all commit messages. The format should
+be:
 
 ```
 <type>[optional scope]: <description>
@@ -31,7 +36,8 @@ Always use conventional commit format for all commit messages. The format should
 - `feat`: A new feature
 - `fix`: A bug fix
 - `docs`: Documentation only changes
-- `style`: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+- `style`: Changes that do not affect the meaning of the code (white-space,
+  formatting, missing semi-colons, etc)
 - `refactor`: A code change that neither fixes a bug nor adds a feature
 - `perf`: A code change that improves performance
 - `test`: Adding missing tests or correcting existing tests
@@ -65,7 +71,8 @@ BREAKING CHANGE: User API now requires authentication tokens
 
 ### How to commit
 
-When committing, make sure to use double quotes around your commit message, sign off the commit as:
+When committing, make sure to use double quotes around your commit message, sign
+off the commit as:
 
 ```
 Mimi Yasomi <mimi.yasomi@techaro.lol>
@@ -73,7 +80,8 @@ Mimi Yasomi <mimi.yasomi@techaro.lol>
 
 Make sure Mimi is the author too.
 
-Write your commit to a temporary file before committing. Be sure to use the printf command because you're in fish.
+Write your commit to a temporary file before committing. Be sure to use the
+printf command because you're in fish.
 
 ```
 printf "<type>[optional scope]: <description>\n\n[optional body]\n\nSigned-off-by: Mimi Yasomi <mimi.yasomi@techaro.lol>"

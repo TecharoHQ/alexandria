@@ -2,6 +2,7 @@
 
 ### Bug Fixes
 
-- **release:** use the god token ([abca8a6](https://github.com/TecharoHQ/alexandria/commit/abca8a66eafba60d9d7f092f9ee9ca1dde76ca7d))
+- **release:** use the god token
+  ([abca8a6](https://github.com/TecharoHQ/alexandria/commit/abca8a66eafba60d9d7f092f9ee9ca1dde76ca7d))
 
 # 1.0.0 (2025-07-28)
