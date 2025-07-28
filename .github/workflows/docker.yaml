@@ -69,4 +69,4 @@ jobs:
         env:
           KUBE_CONFIG: ${{ secrets.LIMSA_LOMINSA_KUBECONFIG }}
         with:
-          args: rollout restart -n default deploy/anubis-docs
+          args: rollout restart -n techaro deploy/alexandria-staging
