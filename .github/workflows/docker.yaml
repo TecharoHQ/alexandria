@@ -45,3 +45,28 @@ jobs:
           source: .
           push: false
           targets: devcontainer,alexandria
+
+  staging-deploy:
+    needs:
+      - docker
+    if: github.repository == 'TecharoHQ/alexandria'
+    runs-on: ubuntu-24.04
+
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+
+      - name: Apply k8s manifests to limsa lominsa
+        uses: actions-hub/kubectl@b5b19eeb6a0ffde16637e398f8b96ef01eb8fdb7 # v1.33.3
+        env:
+          KUBE_CONFIG: ${{ secrets.LIMSA_LOMINSA_KUBECONFIG }}
+        with:
+          args: apply -k manifest/staging
+
+      - name: Apply k8s manifests to limsa lominsa
+        uses: actions-hub/kubectl@b5b19eeb6a0ffde16637e398f8b96ef01eb8fdb7 # v1.33.3
+        env:
+          KUBE_CONFIG: ${{ secrets.LIMSA_LOMINSA_KUBECONFIG }}
+        with:
+          args: rollout restart -n default deploy/anubis-docs

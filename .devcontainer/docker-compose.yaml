@@ -31,8 +31,6 @@ services:
       #platforms:
       #  - linux/amd64
       #  - linux/arm64
-      cache-from:
-        - type=registry,ref=ghcr.io/techarohq/alexandria/devcontainer/cache
     volumes:
       - ../:/workspace/alexandria:cached
       - node-modules:/workspace/alexandria/node_modules
