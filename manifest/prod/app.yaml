@@ -27,5 +27,5 @@ spec:
 
   secrets:
     - name: env
-      itemPath: vaults/lc5zo4zjz3if3mkeuhufjmgmui/items/mh2442nxyyx43rruzuquk2ou3y
+      itemPath: vaults/lc5zo4zjz3if3mkeuhufjmgmui/items/jvwlg7ikpobhey25czgaboe3cy
       environment: true
