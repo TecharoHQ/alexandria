@@ -2,46 +2,45 @@
 
 As in the library.
 
-This is Techaro's log ingestion and aggregation pipeline, with a client for slog
-to feed logs into the beast.
+This is Techaro's log ingestion and aggregation pipeline, featuring a client for
+slog to feed logs into the system.
 
 ## Why does this exist?
 
-In order to make sure that Anubis and related infrastructure bits are working
-the best they can, we need to be able to monitor how Anubis is being used in the
-real world. Alexandria is the pipeline that ingests logs from customer instances
-of Anubis, internal infrastructure, and other sources so that there are fewer
-panes of glass to look through when finding information.
+To ensure that Anubis and related infrastructure components operate at their
+best, we need to monitor how Anubis is used in real-world scenarios. Alexandria
+serves as the pipeline that ingests logs from customer instances of Anubis,
+internal infrastructure, and other sources, reducing the number of tools
+required to locate information.
 
-Alexandria is the main ingestion component. When Anubis, Thoth, or other
+Alexandria is the primary ingestion component. When Anubis, Thoth, or other
 services emit log lines, they buffer them in-memory for up to 32 kilobytes of
-logs or one minute (whichever happens first). Then the logs are submitted to
-Alexandria, and Alexandria will write them to
-[Tigris](https://www.tigrisdata.com).
+logs or one minute (whichever occurs first). The logs are then submitted to
+Alexandria, which writes them to [Tigris](https://www.tigrisdata.com).
 
-Once the logs are written to Tigris, Tigris emits
+Once the logs are stored in Tigris, Tigris emits
 [object notification webhooks](https://www.tigrisdata.com/docs/buckets/object-notifications/)
-to serverless functions. These serverless functions will fetch new logs, scrape
-them for relevant information, publish those facts internally, and then handle
-the next log observation.
+to serverless functions. These functions fetch new logs, analyze them for
+relevant information, publish those findings internally, and handle subsequent
+log observations.
 
 ## How are logs stored?
 
-All logs are stored according to the following lifecycle rules:
+Logs follow these lifecycle rules:
 
-- Logs are ingressed into the Standard storage tier into the `logs` folder.
-- One day later, logs are compacted per log ID and moved to the Archive Instant
+- Logs are ingested into the Standard storage tier within the `logs` folder.
+- After one day, logs are compacted by log ID and moved to the Archive Instant
   Retrieval storage tier.
-- After 91 days, logs are automatically deleted.
+- Logs are automatically deleted after 91 days.
 
 ## How do I opt out of this?
 
-For package maintainers, you may opt out of this by building Anubis with the
-`limited-support-ability`
+For package maintainers, you can opt out by building Anubis with the
+`limitedsupportability`
 [build tag](https://www.digitalocean.com/community/tutorials/customizing-go-binaries-with-build-tags).
-Please note that if you do this, Techaro's ability to support your installation
-of Anubis or other software will be limited.
+Please note that opting out will limit Techaro's ability to support your
+installation of Anubis or other software.
 
-For users, you may opt out of this by running Anubis with the
-`ANUBIS_LOG_SUBMISSION=i-want-to-make-it-harder-to-get-help` envrionment
+For users, you can opt out by running Anubis with the
+`ANUBIS_LOG_SUBMISSION=i-want-to-make-it-harder-to-get-help` environment
 variable set.
