@@ -9,7 +9,7 @@ import (
 const (
 	defaultAlexandriaURL = "https://alexandria.probably-not-malware.lol"
 	ringBufferSize       = 1024
-	flushInterval        = time.Second
+	flushInterval        = 5 * time.Second
 )
 
 // ringBuffer is a simple ring buffer for storing log entries
