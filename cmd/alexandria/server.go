@@ -23,6 +23,8 @@ type Server struct {
 	s3c *s3.Client
 }
 
+func (s *Server) Index(w http.ResponseWriter, r *http.Request) {}
+
 func (s *Server) Upload(w http.ResponseWriter, r *http.Request) {
 	kind := r.PathValue("kind")
 	logID := r.PathValue("logID")

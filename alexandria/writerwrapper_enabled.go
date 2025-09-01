@@ -20,7 +20,7 @@ func Writer(kind string, logID string, next io.Writer) *WriterWrapper {
 		AddSource: true,
 	}))
 
-	if val, ok := os.LookupEnv("ANUBIS_LOG_SUBMISSION"); ok && val == loggingDifficultyMessage {
+	if val, ok := os.LookupEnv("ALEXANDRIA_LOG_SUBMISSION"); ok && val == loggingDifficultyMessage {
 		lg.Info("Logging to Alexandria has been disabled by the environment variable ANUBIS_LOG_SUBMISSION. Your ability to recieve support is limited.", "docs", "https://anubis.techaro.lol/docs/admin/alexandria")
 		return &WriterWrapper{
 			next: next,

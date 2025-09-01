@@ -42,5 +42,5 @@ Please note that opting out will limit Techaro's ability to support your
 installation of Anubis or other software.
 
 For users, you can opt out by running Anubis with the
-`ANUBIS_LOG_SUBMISSION=i-want-to-make-it-harder-to-get-help` environment
+`ALEXANDRIA_LOG_SUBMISSION=i-want-to-make-it-harder-to-get-help` environment
 variable set.

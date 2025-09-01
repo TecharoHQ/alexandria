@@ -1,0 +1,154 @@
+@font-face {
+  font-family: "Podkova";
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url(static/podkova.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Iosevka Curly";
+  font-style: monospace;
+  font-display: swap;
+  src: url(static/iosevka-curly.woff2) format("woff2");
+}
+
+/* latin-ext */
+@font-face {
+  font-family: "Schibsted Grotesk";
+  font-style: italic;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url(static/schibsted-grotesk-italic-latin-ext.woff2) format("woff2");
+  unicode-range:
+    U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
+    U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Schibsted Grotesk";
+  font-style: italic;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url(static/schibsted-grotesk-italic-latin.woff2) format("woff2");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212,
+    U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: "Schibsted Grotesk";
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url(static/schibsted-grotesk-latin-ext.woff2) format("woff2");
+  unicode-range:
+    U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
+    U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Schibsted Grotesk";
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url(static/schibsted-grotesk-latin.woff2) format("woff2");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212,
+    U+2215, U+FEFF, U+FFFD;
+}
+
+main {
+  font-family: "Schibsted Grotesk", sans-serif;
+  max-width: 50rem;
+  padding: 2rem;
+  margin: auto;
+}
+
+@media only screen and (max-device-width: 736px) {
+  main {
+    padding: 0;
+  }
+}
+
+::selection {
+  background: oklch(70.54% 0.0976 2.19);
+}
+
+body {
+  background: oklch(24.08% 0.0049 219.67);
+  color: oklch(96.55% 0.0394 100.86);
+}
+
+pre {
+  background-color: oklch(34.41% 0.0066 48.52);
+  padding: 1em;
+  border: 0;
+  font-family:
+    Iosevka Curly Iaso,
+    monospace;
+}
+
+a,
+a:active,
+a:visited {
+  color: oklch(59.73% 0.1105 352.22);
+  background-color: oklch(27.68% 0 0);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin-bottom: 0.1rem;
+  font-family: Podkova, serif;
+}
+
+blockquote {
+  border-left: 1px solid oklch(75.64% 0.041 82.28);
+  margin: 0.5em 10px;
+  padding: 0.5em 10px;
+}
+
+footer {
+  text-align: center;
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background: oklch(96.55% 0.0394 100.86);
+    color: oklch(24.08% 0.0049 219.67);
+  }
+
+  pre {
+    background-color: oklch(89.41% 0.0566 89.24);
+    padding: 1em;
+    border: 0;
+  }
+
+  a,
+  a:active,
+  a:visited {
+    color: oklch(59.73% 0.1105 352.22);
+    background-color: oklch(95.55% 0.0555 96.15);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    margin-bottom: 0.1rem;
+  }
+
+  blockquote {
+    border-left: 1px solid oklch(48.08% 0.0172 64.07);
+    margin: 0.5em 10px;
+    padding: 0.5em 10px;
+  }
+}

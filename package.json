@@ -4,7 +4,7 @@
   "description": "Techaro's log aggregation pipeline",
   "main": "index.js",
   "scripts": {
-    "dev": "npm run generate && go run ./cmd/web",
+    "dev": "npm run generate && go run ./cmd/alexandria",
     "format": "npx prettier -w . && go tool goimports -w .",
     "generate": "go generate ./... && npm run format",
     "prepare": "husky",

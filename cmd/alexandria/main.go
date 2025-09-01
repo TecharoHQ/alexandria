@@ -8,6 +8,9 @@ import (
 	"log/slog"
 	"net/http"
 
+	"github.com/TecharoHQ/alexandria/web"
+	"github.com/TecharoHQ/alexandria/web/xess"
+	"github.com/a-h/templ"
 	"github.com/aws/aws-sdk-go-v2/config"
 	"github.com/aws/aws-sdk-go-v2/service/s3"
 	"github.com/facebookgo/flagenv"
@@ -46,6 +49,17 @@ func main() {
 	}))
 
 	mux.Handle("PUT /upload/{kind}/{logID}", http.MaxBytesHandler(http.HandlerFunc(s.Upload), maxLogSize))
+
+	xess.Mount(mux)
+
+	mux.HandleFunc("/{$}", func(w http.ResponseWriter, r *http.Request) {
+		templ.Handler(
+			xess.Simple("Not found: "+r.URL.Path, web.Index()),
+			templ.WithStatus(http.StatusTeapot),
+		)
+	})
+
+	mux.HandleFunc("/", xess.NotFound)
 
 	slog.Info("listening over HTTP", "bind", *bind)
 	log.Fatal(http.ListenAndServe(*bind, mux))
