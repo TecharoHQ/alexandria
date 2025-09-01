@@ -1,7 +1,6 @@
 {
   "name": "@techaro/alexandria",
   "version": "1.0.1",
-  "license": "FCL-1.0-MIT",
   "description": "Techaro's log aggregation pipeline",
   "main": "index.js",
   "scripts": {
