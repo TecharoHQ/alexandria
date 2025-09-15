@@ -16,6 +16,7 @@ import (
 
 var knownKinds = []string{
 	"techaro.anubis",
+	"techaro.anubis.request-samples",
 	"techaro.thoth",
 }
 
