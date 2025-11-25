@@ -5,7 +5,7 @@ metadata:
   namespace: techaro
 
 spec:
-  image: git.xeserv.us/techaro-int/thoth/cmd/alexandria:GIT_TAG
+  image: ghcr.io/techarohq/alexandria:GIT_TAG
   imagePullSecrets:
     - git-xeserv-us
   env:
@@ -27,5 +27,5 @@ spec:
 
   secrets:
     - name: env
-      itemPath: vaults/lc5zo4zjz3if3mkeuhufjmgmui/items/jvwlg7ikpobhey25czgaboe3cy
+      itemPath: vaults/lc5zo4zjz3if3mkeuhufjmgmui/items/x4b7btsff4huibzr3cjuhroo5i
       environment: true
