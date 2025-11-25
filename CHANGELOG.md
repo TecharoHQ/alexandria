@@ -1,3 +1,15 @@
+# [1.2.0](https://github.com/TecharoHQ/alexandria/compare/v1.1.0...v1.2.0) (2025-11-25)
+
+### Bug Fixes
+
+- **manifest:** update staging image registry to xeiaso.net
+  ([6221b54](https://github.com/TecharoHQ/alexandria/commit/6221b5486fb403ff4a4534e439a0e24ea67cd783))
+
+### Features
+
+- **cmd/alexandria:** implement log batching with bundler library
+  ([1f7c387](https://github.com/TecharoHQ/alexandria/commit/1f7c3875bc6ceefa36ca0c4f2188a8af86a4731d))
+
 # [1.1.0](https://github.com/TecharoHQ/alexandria/compare/v1.0.1...v1.1.0) (2025-11-25)
 
 ### Bug Fixes
