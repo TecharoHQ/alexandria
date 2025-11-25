@@ -40,9 +40,7 @@ func main() {
 	// Create an S3 client
 	s3Client := s3.NewFromConfig(cfg)
 
-	s := &Server{
-		s3c: s3Client,
-	}
+	s := NewServer(s3Client, *bucket)
 
 	mux.Handle("GET /healthz", http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintln(w, "OK")
