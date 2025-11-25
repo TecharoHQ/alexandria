@@ -1,5 +1,5 @@
 variable "ALPINE_VERSION" { default = "3.22" }
-variable "GO_VERSION" { default = "1.24" }
+variable "GO_VERSION" { default = "1.25" }
 variable "GITHUB_SHA" { default = "devel" }
 
 group "default" {
@@ -38,7 +38,7 @@ target "alexandria" {
     "linux/amd64",
     "linux/arm64",
   ]
-  
+
   pull = true
   tags = [
     "ghcr.io/techarohq/alexandria:latest",
