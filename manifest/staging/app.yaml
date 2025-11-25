@@ -5,7 +5,7 @@ metadata:
   namespace: techaro
 
 spec:
-  image: ghcr.io/techarohq/alexandria:latest
+  image: reg.xeiaso.net/techaro/alexandria:latest
   autoUpdate: true
   imagePullSecrets:
     - git-xeserv-us
